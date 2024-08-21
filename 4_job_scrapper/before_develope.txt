@@ -1,0 +1,18 @@
+indeed 웹사이트에 간다. 
+ - https://kr.indeed.com/취업?q=python&limit=50
+    -> indeed 측에서 크롤링이 불가능하도록 설정해서 사람인 웹사이트로 대체하였다. 
+        - https://www.saramin.co.kr/zf_user/search/recruit?&searchword=python
+페이지 수를 알아낸다. 
+ - for loop을 써서 각 페이지를 hit 하기 위함
+ - 각각의 페이지에 limit=50 -> 50개까지 보여준다. 
+ - 각각의 페이지에서 start가 달라진다. 
+HTML을 navigate하고 필요한 걸 HTML에서 찾아내기 위해 goquery(Go를 위한 JQuery 같은 것)를 쓴다. 
+ - https://github.com/PuerkitoBio/goquery
+    -> HTML 내부를 들여다볼 수 있게 한다.
+ - goquery를 설치한다. 
+    -> go get github.com/PuerkitoBio/goquery  
+
+작동 원리
+1) 페이지들을 받아온다. 
+2) 각각의 페이지에 방문하여 그 페이지로부터 job들을 추출한다. 
+3) 추출한 job들을 엑셀에 집어 넣는다. 
